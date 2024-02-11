@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Design</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script>
+    // JavaScript function to toggle the color of the like icon
+    function toggleLike(event) {
+      // Prevent the default action of the anchor tag
+      event.preventDefault();
+      
+      // Toggle the 'liked' class on the like button
+      event.target.classList.toggle('liked');
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0%;
+    }
+
+    
+      .header {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      color: white;
+    }
+
+    .left-header img {
+      width: 115px;
+    }
+
+    .mid-header a i {
+      margin-right: 5px; /* Added spacing between icon and text */
+    }
+    
+    .right-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .right-header a {
+      margin-right: 10px; /* Add spacing between icons */
+      color: white;
+      text-decoration: none;
+    }
+
+    .right-header a:last-child {
+      margin-right: 0; /* Remove margin from the last icon */
+    }
+
+    .right-header a img {
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    .first-nav{
+      
+      display: flex;
+      justify-content: space-around;
+      
+      
+    }
+
+    .first-nav a {
+      
+      color: black; /* Default color for icons */
+      font-size: 1.5em; /* Increased icon size */
+      text-decoration: none;
+      position: relative; /* Add relative positioning */
+    }
+
+    .first-nav a:hover {
+      color: blue; /* Color change on hover */
+    }
+
+    .first-nav a.active::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: blue;
+      position: absolute;
+      bottom: -5px; /* Adjust position to place the line under the icon */
+      left: 0;
+    }
+
+ 
+    #footer {
+      background-color: #f0f2f5;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    hr{
+      position: relative;
+     top: 5px;
+    }
+    .second-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* Add margin-bottom */
+}
+    .second-nav input {
+      flex: 1; /* Take remaining space */
+      margin: 0 30px; /* Add margin around the input field */
+      padding: 10px; /* Add padding to the input field */
+      border-radius: 40px;
+      border: 1px solid  grey;
+    }
+
+
+    .second-nav img {
+      width: 40px;
+      border-radius: 50%;
+    }
+    .second-nav img:hover {
+      cursor: pointer;
+    }
+    .grey-space {
+      background-color: rgb(202, 201, 201);
+      height: 10px;
+    }
+    .container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px;
+  margin-bottom: 20px; /* Adjust as needed */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+
+.story {
+  width: 22%; /* Adjusted width to accommodate translation */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 2%; /* Added margin between stories */
+  flex-shrink: 0; /* Prevent stories from shrinking */
+}
+
+.profile-picture {
+  width: 100%;
+  
+  border-radius: 10px 10px 0 0;
+}
+
+.story-content {
+  position: relative;
+  
+}
+
+.main-picture {
+  width: 100%;
+ 
+}
+
+.add-to-story {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.stacked-pictures {
+  position: relative;
+  
+}
+.tin-profile-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px; /* Adjust size as needed */
+  border-radius: 50%;
+ 
+}
+
+.tiny-profile-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 2px solid blue; /* Added blue border */
+}
+
+.main-picture {
+  width: 100%;
+  height: 175px;
+  
+  border-radius: 10px 10px 0 0; /* Adjust border radius to match the main picture */
+}
+
+.creator-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 0 0 10px 10px; /* Adjust border radius to match the main picture */
+}
+.pro {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+/* Styles for post containers */
+.post-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+
+.post-content {
+    width: 90%;
+    padding: 20px;
+    overflow: hidden; /* Clear floats */
+}
+
+
+
+.creator-info span {
+  position: relative;
+  top: 10px;
+    font-size: 14px;
+    color: #606770;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.post-picture {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styles for post actions */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid #e9ebee;
+}
+
+.post-actions span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #606770;
+  cursor: pointer;
+}
+
+.post-actions span i {
+  margin-right: 5px;
+}
+p{
+  position: relative;
+  top: 5px;
+  font-weight: bold;
+ 
+}
+
+/* Styles for post statistics */
+.post-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+ 
+  border-radius: 10px 10px; /* Rounded bottom corners */
+  font-size: 14px;
+}
+
+.post-stats span {
+  color: #606770; /* Dark gray text color */
+}
+
+.post-stats span:first-child {
+  margin-right: 20px; /* Add space between elements */
+}
+
+.post-stats span i {
+  margin-right: 5px; /* Add space between icon and text */
+}
+
+.post-stats span:hover {
+  color: blue; /* Change color on hover */
+}
+.liked {
+      color: blue;
+    }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .post-content {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+ 
+
+   
+  </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="left-header">
+        <img src="face.jpg" alt="">
+    </div>
+    
+    <div class="right-header">
+        <a href="#" onclick="toggleActive(event, 'home')"><img src="save.jpg" alt=""></a>
+        <a href="#" onclick="toggleActive(event, 'users')"><img src="search.jpg" alt=""></a>
+        <a href="#" onclick="toggleActive(event, 'profile')"><img src="be.jpg" alt=""></a>
+    </div>
+</header>
+
+<nav class="first-nav">
+  
+    <a href="#" onclick="toggleActive(event, 'home')"><i class="fas fa-home"></i></a>
+    <a href="#" onclick="toggleActive(event, 'users')"><i class="fas fa-users"></i></a>
+    <a href="#" onclick="toggleActive(event, 'profile')"><i class="fas fa-user"></i></a>
+    <a href="#" onclick="toggleActive(event, 'notifications')"><i class="fas fa-bell"></i></a>
+    <a href="#" onclick="toggleActive(event, 'menu')"><i class="fas fa-bars"></i></a>
+</div>
+</nav>
+  <hr> <!-- Added div for the active line -->
+
+
+  <nav class="second-nav">
+   <a href=""> <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture"></a>
+    <input type="text" placeholder="What's on your mind?">
+    <a href=""><img src="none.jpg" alt="Additional Image"></a>
+  </nav>
+  <div class="grey-space"></div>
+
+  <div class="container">
+    <div class="story">
+      <div class="story-content">
+          <div class="stacked-pictures">
+              <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tin-profile-picture">
+              <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+              <!-- Add blue plus button icon -->
+              <a href="#" class="add-to-story"><i class="fas fa-plus-circle"></i></a>
+          </div>
+          <span class="creator-name">Add</span>
+
+      </div>
+  </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Ahmad</span>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story-content">
+        <div class="stacked-pictures">
+          <img src="Screenshot 2024-01-27 082408.png" alt="Profile Picture" class="tiny-profile-picture">
+          <img src="Screenshot 2024-01-28 065701.png" alt="Story" class="main-picture">
+        </div>
+        <span class="creator-name">Youssof</span>
+      </div>
+    </div>
+  
+    <!-- Repeat the same structure for other stories -->
+  </div>
+
+<div class="grey-space"></div>
+
+<div class="post-container">
+  <div class="post-content">
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+    <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+    <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  <div class="post-content">
+    
+    <img class="pro" src="photo_2024-02-02_00-25-50.jpg" alt="Profile Picture" class="profile-picture">
+    <div class="creator-info">
+      <span>Ahmad</span>
+      <span>February 7, 2024</span>
+      <p>Green Screen</p>
+    </div>
+    
+    
+    <img src="Screenshot 2024-01-28 065701.png" alt="Post Picture" class="post-picture">
+  </div>
+  <div class="post-stats">
+    <span>Ahmad balbissi and youssof moussa and 13M likes</span>
+    <span>10M comments</span>
+   
+  </div>
+  <div class="post-actions">
+     <span onclick="toggleLike(event)"><i class="far fa-thumbs-up"></i> Like</span>
+    <span><i class="far fa-comment"></i> Comment</span>
+    <span><i class="fas fa-share"></i> Share</span>
+  </div>
+  
+</div>
+
+<div id="footer">
+  <P>YOU'VE ALL CAUGHT UP</P>
+    &copy; copyrights reserved to Youssof Moussa 2024 
+</div>
+
+
+</body>
+</html>
